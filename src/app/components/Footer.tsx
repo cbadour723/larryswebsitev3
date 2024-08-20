@@ -1,4 +1,3 @@
-// components/Footer.tsx
 import Image from 'next/image';
 import React from 'react';
 
@@ -6,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#0D0D0D] text-[#F2F2F2] py-6">
       <div className="text-center">
-        <p>&copy; 2024 Larry's Deli Que. All rights reserved.</p>
+        <p>&copy; 2024 Larry&apos;s Deli Que. All rights reserved.</p>
         <div className="mt-4">
           <p className="mb-2">718 S. Anderson Blvd., Topsail Beach, NC, United States, North Carolina</p>
           <p className="mb-2">(910) 928-8010</p>

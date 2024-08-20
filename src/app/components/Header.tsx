@@ -1,8 +1,6 @@
-// components/Header.tsx
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
-
 
 const Header: React.FC = () => {
   return (
@@ -13,7 +11,7 @@ const Header: React.FC = () => {
           <Link href="/">
             <Image 
               src="/assets/images/larryslogo.jpg" 
-              alt="Larry's Deli Que Logo" 
+              alt="Larry&apos;s Deli Que Logo" 
               width={150} // Adjust the width as needed
               height={50} // Adjust the height as needed
               className="mr-4"

@@ -18,7 +18,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-60"></div>
         <div className="relative z-10 text-white p-6">
-          <h1 className="text-5xl font-extrabold mb-4">Welcome to Larry's Deli Que!</h1>
+          <h1 className="text-5xl font-extrabold mb-4">Welcome to Larry&apos;s Deli Que!</h1>
           <p className="text-lg mb-8 max-w-2xl mx-auto">Serving the best BBQ in town. Come for the food, stay for the atmosphere!</p>
           <a href="/menu" className="bg-crimson text-white py-3 px-6 rounded-lg shadow-lg hover:bg-darkCrimson transition-colors">See Our Menu</a>
         </div>
@@ -97,7 +97,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50"></div>
             <div className="absolute bottom-0 left-0 p-4 text-white">
               <h3 className="text-2xl font-semibold">Rueben</h3>
-              <p className="text-lg mt-2">Our famous and mouth watering Rueben with a side of fries.</p>
+              <p className="text-lg mt-2">Our famous and mouth-watering Rueben with a side of fries.</p>
             </div>
           </div>
           <div className="relative border rounded-lg overflow-hidden border-darkGray shadow-lg hover:shadow-xl transition-shadow">
@@ -110,7 +110,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50"></div>
             <div className="absolute bottom-0 left-0 p-4 text-white">
-              <h3 className="text-2xl font-semibold">Local beer</h3>
+              <h3 className="text-2xl font-semibold">Local Beer</h3>
               <p className="text-lg mt-2">Beer from your favorite local breweries.</p>
             </div>
           </div>
