@@ -1,137 +1,84 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Image from 'next/image';
 import React from 'react';
+import Header from './components/Header'; // Adjust the import path if necessary
+import Footer from './components/Footer'; // Adjust the import path if necessary
+import Image from 'next/image';
 
-export default function Home() {
+const LandingPage: React.FC = () => {
   return (
-    <main className="flex min-h-screen flex-col bg-offWhite">
+    <div className="min-h-screen bg-skyBlue text-white">
+      {/* Header */}
       <Header />
-      
-      <section className="relative flex flex-col items-center justify-center text-center bg-cover bg-center h-screen">
-        <Image 
-          src="/assets/images/bbqbig.jpg" 
-          alt="Deli Hero" 
-          layout="fill" 
-          objectFit="cover"
-          className="absolute inset-0"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-60"></div>
-        <div className="relative z-10 text-white p-6">
-          <h1 className="text-5xl font-extrabold mb-4">Welcome to Larry&apos;s Deli Que!</h1>
-          <p className="text-lg mb-8 max-w-2xl mx-auto">Serving the best BBQ in town. Come for the food, stay for the atmosphere!</p>
-          <a href="/menu" className="bg-crimson text-white py-3 px-6 rounded-lg shadow-lg hover:bg-darkCrimson transition-colors">See Our Menu</a>
-        </div>
+
+      {/* Hero Section */}
+      <section className="h-[50vh] bg-[url('/images/pirate-bg.webp')] bg-cover bg-center flex flex-col justify-center items-center text-center px-4">
+        <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4">Welcome to Pirates Turf Putt Putt</h1>
+        <p className="text-lg md:text-xl mb-6">The most adventurous mini-golf experience</p>
+        <button className="px-8 py-4 bg-goldenYellow text-pirateRed rounded-lg hover:bg-sandyBeige transition duration-300 font-semibold">
+          Book Now
+        </button>
       </section>
 
-      {/* New Video Section */}
-      <section className="relative flex flex-col items-center justify-center text-center py-16 px-8 bg-darkGray">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-extrabold mb-6 text-white">Watch Our Story</h2>
-          <div className="flex flex-col gap-8 md:flex-row md:gap-8">
-            <video controls className="w-full h-auto md:w-1/2">
-              <source src="/assets/videos/larryvid.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <video controls className="w-full h-auto md:w-1/2">
-              <source src="/assets/videos/larrybbq.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-8 bg-lightGray">
-        <h2 className="text-4xl font-extrabold text-center mb-6 text-darkGray">Our Delicious Dishes</h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="relative border rounded-lg overflow-hidden border-darkGray shadow-lg hover:shadow-xl transition-shadow">
+      {/* Features Section with WebP Images */}
+      <section id="features" className="py-16 bg-skyBlue text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8">Explore Our Course</h2>
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4">
+          <div className="bg-chestnutBrown p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <Image 
-              src="/assets/images/wings.jpg" 
-              alt="Ribs" 
-              width={500} 
-              height={300} 
-              className="object-cover w-full h-full" 
+              src="/assets/images/coursepic.jpg" 
+              alt="Pirates Turf Putt Putt Course 1" 
+              width={600} 
+              height={450} 
+              className="rounded-lg mb-4 object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50"></div>
-            <div className="absolute bottom-0 left-0 p-4 text-white">
-              <h3 className="text-2xl font-semibold">Wings</h3>
-              <p className="text-lg mt-2">Succulent and smoky wings, slow-cooked to perfection.</p>
-            </div>
+            <h3 className="text-xl md:text-2xl font-bold text-goldenYellow mb-2">Challenging Obstacles</h3>
+            <p className="text-lg md:text-xl text-sandyBeige">Test your skills with our creative and fun obstacles.</p>
           </div>
-          <div className="relative border rounded-lg overflow-hidden border-darkGray shadow-lg hover:shadow-xl transition-shadow">
+          <div className="bg-chestnutBrown p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <Image 
-              src="/assets/images/sandwhich.jpg" 
-              alt="Brisket" 
-              width={500} 
-              height={300} 
-              className="object-cover w-full h-full" 
+              src="/assets/images/hole9.jpg" 
+              alt="Pirates Turf Putt Putt Course 2" 
+              width={600} 
+              height={450} 
+              className="rounded-lg mb-4 object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50"></div>
-            <div className="absolute bottom-0 left-0 p-4 text-white">
-              <h3 className="text-2xl font-semibold">Sandwhich</h3>
-              <p className="text-lg mt-2">Customize your sandwhich however you like!</p>
-            </div>
+            <h3 className="text-xl md:text-2xl font-bold text-goldenYellow mb-2">Themed Environments</h3>
+            <p className="text-lg md:text-xl text-sandyBeige">Immerse yourself in a pirate-themed adventure as you play.</p>
           </div>
-          <div className="relative border rounded-lg overflow-hidden border-darkGray shadow-lg hover:shadow-xl transition-shadow">
+          <div className="bg-chestnutBrown p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <Image 
-              src="/assets/images/bbq.jpg" 
-              alt="Pulled Pork" 
-              width={500} 
-              height={300} 
-              className="object-cover w-full h-full" 
+              src="/assets/images/piratesturfpic.jpg" 
+              alt="Pirates Turf Putt Putt Course 3" 
+              width={600} 
+              height={450} 
+              className="rounded-lg mb-4 object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50"></div>
-            <div className="absolute bottom-0 left-0 p-4 text-white">
-              <h3 className="text-2xl font-semibold">Pulled Pork</h3>
-              <p className="text-lg mt-2">Shredded pork with our house-made BBQ sauce.</p>
-            </div>
-          </div>
-          <div className="relative border rounded-lg overflow-hidden border-darkGray shadow-lg hover:shadow-xl transition-shadow">
-            <Image 
-              src="/assets/images/rueben.jpg" 
-              alt="Salad" 
-              width={500} 
-              height={300} 
-              className="object-cover w-full h-full" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50"></div>
-            <div className="absolute bottom-0 left-0 p-4 text-white">
-              <h3 className="text-2xl font-semibold">Rueben</h3>
-              <p className="text-lg mt-2">Our famous and mouth-watering Rueben with a side of fries.</p>
-            </div>
-          </div>
-          <div className="relative border rounded-lg overflow-hidden border-darkGray shadow-lg hover:shadow-xl transition-shadow">
-            <Image 
-              src="/assets/images/localbeer.jpg" 
-              alt="Baked Beans" 
-              width={500} 
-              height={300} 
-              className="object-cover w-full h-full" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50"></div>
-            <div className="absolute bottom-0 left-0 p-4 text-white">
-              <h3 className="text-2xl font-semibold">Local Beer</h3>
-              <p className="text-lg mt-2">Beer from your favorite local breweries.</p>
-            </div>
-          </div>
-          <div className="relative border rounded-lg overflow-hidden border-darkGray shadow-lg hover:shadow-xl transition-shadow">
-            <Image 
-              src="/assets/images/brgr.jpg" 
-              alt="Cornbread" 
-              width={500} 
-              height={300} 
-              className="object-cover w-full h-full" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50"></div>
-            <div className="absolute bottom-0 left-0 p-4 text-white">
-              <h3 className="text-2xl font-semibold">Double Barrel</h3>
-              <p className="text-lg mt-2">Juicy beef patty topped with melted cheese, crisp lettuce, ripe tomatoes, and a tangy special sauce.</p>
-            </div>
+            <h3 className="text-xl md:text-2xl font-bold text-goldenYellow mb-2">Perfect for All Ages</h3>
+            <p className="text-lg md:text-xl text-sandyBeige">Bring the whole family for a day of fun on our course.</p>
           </div>
         </div>
       </section>
 
+      {/* Video Section */}
+      <section id="video" className="py-16 bg-skyBlue text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8">See the Fun in Action</h2>
+        <div className="relative w-full max-w-4xl mx-auto">
+          <video
+            className="w-full rounded-lg shadow-lg"
+            controls
+            autoPlay
+            muted
+            loop
+          >
+            <source src="/assets/videos/piratesfun.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+
+      {/* Footer */}
       <Footer />
-    </main>
+    </div>
   );
-}
+};
+
+export default LandingPage;

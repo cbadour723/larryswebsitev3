@@ -1,81 +1,106 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+// pages/about.tsx
+
 import React from 'react';
+import Header from '../components/Header'; // Adjust the import path if necessary
+import Footer from '../components/Footer'; // Adjust the import path if necessary
 import Image from 'next/image';
-import Link from 'next/link';
 
 const About: React.FC = () => {
   return (
-    <div className="min-h-screen bg-offWhite flex flex-col">
+    <div className="min-h-screen bg-skyBlue text-white">
+      {/* Header */}
       <Header />
-      <main className="flex-grow p-8 md:p-16">
-        <section className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-extrabold text-darkGray mb-8">About Us</h1>
-          <div className="bg-white shadow-xl rounded-lg p-8 mb-8">
-            <p className="text-lg mb-4 text-darkGray leading-relaxed">
-              Welcome to Larry&apos;s Deli Que! We pride ourselves on offering the best deli sandwiches in town. Our mission is to provide high-quality food and excellent service to every customer.
+
+      {/* About Us Section */}
+      <main className="py-16 px-4 md:px-8">
+        {/* Introduction Section */}
+        <section className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
+          <div className="bg-sandyBeige text-gray-800 p-8 rounded-lg shadow-lg mx-auto max-w-4xl">
+            <p className="text-lg md:text-xl">
+              Welcome to Pirates Turf Putt Putt! We take pride in delivering a fun-filled experience for the whole family. Nestled in the heart of Topsail Beach, NC, our unique blend of entertainment options ensures a memorable visit for everyone who walks through our doors.
             </p>
-            <p className="text-lg text-darkGray mb-8 leading-relaxed">
-              Founded in December 2023, Larry&apos;s Deli Que has been a staple in the community. Our team is dedicated to using fresh ingredients and delivering a memorable dining experience.
+          </div>
+        </section>
+
+        {/* Ice Cream Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Indulge in Our Delicious Ice Cream</h2>
+          <div className="bg-sandyBeige text-gray-800 p-8 rounded-lg shadow-lg mx-auto max-w-3xl">
+            <p className="text-lg md:text-xl text-center mb-8">
+              Our ice cream is more than just a treat—it's a taste adventure! Crafted from the finest ingredients, our ice cream features rich flavors and creamy textures that delight all ages. Whether you’re craving a classic vanilla cone or an adventurous flavor combination, our ice cream parlor is sure to satisfy your sweet tooth. Explore our wide variety of flavors and toppings to create your perfect scoop.
             </p>
-            <div className="flex flex-col md:flex-row gap-8">
-              <Link href="/">
-                <Image 
-                  src="/assets/images/TopsailBeachLarrysDeliQue.jpg" 
-                  alt="Front of Larry&apos;s Deli Que" 
-                  width={600}
-                  height={400}
-                  className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                />
-              </Link>
-              <Link href="/">
-                <Image 
-                  src="/assets/images/larry.jpg" 
-                  alt="Owner of Larry&apos;s Deli Que" 
-                  width={600}
-                  height={400}
-                  className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                />
-              </Link>
-            </div>
-            <div className="mt-8">
-              <Link href="/">
-                <Image 
-                  src="/assets/images/larryholly.jpg" 
-                  alt="Larry and Holly Hollifield" 
-                  width={600}
-                  height={400}
-                  className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                />
-              </Link>
-            </div>
-            <div className="mt-8">
-              <Link href="/">
-                <Image 
-                  src="/assets/images/larryfamily.jpg" 
-                  alt="Larry and Holly Hollifield" 
-                  width={600}
-                  height={400}
-                  className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                />
-              </Link>
+            <div className="text-center">
+              <Image 
+                src="/assets/images/ice-cream.jpg" 
+                alt="Delicious Ice Cream" 
+                width={800} 
+                height={533} 
+                className="rounded-lg mb-4 mx-auto object-cover"
+              />
             </div>
           </div>
-          {/* New Card Section */}
-          <div className="bg-white shadow-xl rounded-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-darkGray mb-4">Featured in Topsail Magazine</h2>
-            <p className="text-lg text-darkGray mb-4">
-              We are excited to be featured in Topsail Magazine! Learn more about Larry&apos;s Deli-Que and our story by checking out the article.
+        </section>
+
+        {/* Arcade Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Enjoy Exciting Arcade Games</h2>
+          <div className="bg-sandyBeige text-gray-800 p-8 rounded-lg shadow-lg mx-auto max-w-3xl">
+            <p className="text-lg md:text-xl text-center mb-8">
+              Step into our arcade and immerse yourself in a world of fun and games! With a diverse selection of classic and modern arcade games, there's something for everyone to enjoy. Compete for high scores, challenge your friends, or simply enjoy the nostalgic thrill of our game collection. Our arcade provides the perfect blend of excitement and entertainment, making it a great destination for a fun day out.
             </p>
-            <Link 
-              href="https://www.topsailmag.com/right-on-cue/"
-              className="block bg-[#D92332] text-white text-center py-2 px-4 rounded-lg hover:bg-red-700 transition-colors duration-300"
-            >
-              Read the Article
-            </Link>
+            <div className="text-center">
+              <Image 
+                src="/assets/images/arcade.jpg" 
+                alt="Arcade Games" 
+                width={800} 
+                height={533} 
+                className="rounded-lg mb-4 mx-auto object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Putt-Putt Course Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Conquer the Putt-Putt Course</h2>
+          <div className="bg-sandyBeige text-gray-800 p-8 rounded-lg shadow-lg mx-auto max-w-3xl">
+            <p className="text-lg md:text-xl text-center mb-8">
+              Our putt-putt course offers a mini-golf experience like no other. Designed with creativity and challenge in mind, our course features intricate obstacles and engaging themes that captivate both young and old. Whether you're a seasoned golfer or new to the game, our putt-putt course promises hours of enjoyment. Gather your family and friends and see who can navigate the course with the lowest score!
+            </p>
+            <div className="text-center">
+              <Image 
+                src="/assets/images/piratescourse2.jpg" 
+                alt="Putt-Putt Course" 
+                width={800} 
+                height={533} 
+                className="rounded-lg mb-4 mx-auto object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Meet Kathy Blackburn Section */}
+        <section className="text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet Kathy Blackburn – Our New Owner</h2>
+          <div className="bg-sandyBeige text-gray-800 p-8 rounded-lg shadow-lg mx-auto max-w-3xl">
+            <p className="text-lg md:text-xl mb-8">
+              We are thrilled to introduce Kathy Blackburn as the new owner of Pirates Turf Putt Putt. With a passion for community and a love for creating memorable experiences, Kathy brings a fresh perspective and enthusiasm to our venue. Her dedication to quality and customer satisfaction is evident in every aspect of our operation. Under Kathy’s leadership, we are committed to enhancing our offerings and ensuring that every visit is exceptional.
+            </p>
+            <div className="text-center">
+              <Image 
+                src="/assets/images/piratesfamily.jpg" 
+                alt="Kathy Blackburn" 
+                width={800} 
+                height={533} 
+                className="rounded-lg mb-4 mx-auto object-cover"
+              />
+            </div>
           </div>
         </section>
       </main>
+
+      {/* Footer */}
       <Footer />
     </div>
   );

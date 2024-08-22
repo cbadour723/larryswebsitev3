@@ -10,13 +10,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'marina-blue': '#27419C', // Custom blue color
-        'alice-blue': '#E5E9F2', // Custom light blue color
-        crimson: '#D92332',
-        mutedPink: '#8C4653',
-        lightGray: '#D9D9D9',
-        offWhite: '#F2F2F2',
-        darkGray: '#0D0D0D',
+        skyBlue: '#049DD9',
+        goldenYellow: '#F2CD13',
+        sandyBeige: '#F2D4AE',
+        chestnutBrown: '#8C471F',
+        pirateRed: '#D91E1E',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

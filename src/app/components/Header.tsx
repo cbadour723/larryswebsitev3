@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         <div className="flex items-center">
           <Link href="/">
             <Image 
-              src="/assets/images/larryslogo.jpg" 
+              src="/assets/images/piratesturflogo.jpg" 
               alt="Larry&apos;s Deli Que Logo" 
               width={150} // Adjust the width as needed
               height={50} // Adjust the height as needed
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
             <Link href="/about">About Us</Link>
           </li>
           <li>
-            <Link href="/menu">Menu</Link> {/* Added link to the menu page */}
+            <Link href="/arcade">Arcade</Link> {/* Added link to the menu page */}
           </li>
           <li>
             <Link href="/contact">Contact</Link>
